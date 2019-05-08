@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="carApp">
+  <head>
+    <title>Toyota</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  </head>
+
+  <body>
+    <%= render 'layouts/nav' %>
+    <%= yield %>
+  </body>
+</html>

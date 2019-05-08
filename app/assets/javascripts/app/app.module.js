@@ -1,0 +1,1 @@
+angular.module('carApp', ['carList','templates','ngRoute','carDetail']);

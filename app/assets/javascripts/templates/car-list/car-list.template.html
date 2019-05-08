@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <h3 class="h-o-1">SẢN PHẨM <span style="color:red">TOYOTA</span></h3>
+  <h1>Tất cả các phiên bản xe</h1>
+  <div class="row">
+    <div class="col-2">
+      <!--Sidebar content-->
+
+      <p>
+        Tìm kiếm theo tên:
+        <input ng-model="$ctrl.query">
+      </p>
+
+      <p>
+        Sắp xếp theo:
+        <select ng-model="$ctrl.orderProp">
+          <option value="name">Tên</option>
+          <option value="price">giá</option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-10">
+      <!--Body content-->
+      <div class="g-c">
+        <div ng-repeat="car in $ctrl.cars | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="card">
+          <a href="#!/cars/{{car.id}}" class="thumbo">
+            <img ng-src="{{car.image}}" alt="{{car.name}}" class="i-t" />
+          </a>
+          <div style="padding: 5px">
+            <a href="#!/cars/{{car.id}}">{{car.model}} {{car.name}}</a>
+            <p><b>Giá từ: {{car.price}} vnđ</b></p>
+            <p>- {{car.slot}} chỗ </p>
+            <p>- {{car.fuel}}</p>
+            <p>- {{car.origin}}</p>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>

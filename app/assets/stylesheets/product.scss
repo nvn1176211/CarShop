@@ -1,0 +1,50 @@
+// Place all the styles related to the Product controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	background-color: #f2f3f4;
+}
+
+a:hover{
+	text-decoration: none !important;
+}
+
+.container-fluid{
+	background-color: inherit;
+}
+
+.g-c{
+	display: grid;
+	grid-template-columns: 270px 270px 270px;
+	grid-row-gap: 30px;
+	padding: 20px;
+	background-color: inherit;
+	justify-content: space-between;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.thumbo{
+	background-color: #b8cced;
+	display: inline-block;
+}
+
+.i-t{
+	width: 250px;
+	height: 145px
+}
+
+
+.h-o-1{
+	border-bottom: 1px solid black;
+	display: inline-block;;
+}
+
