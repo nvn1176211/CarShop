@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+*{
+	box-sizing: border-box;
+}
+
 body{
 	background-color: #f2f3f4;
 }
@@ -16,7 +21,7 @@ a:hover{
 
 .g-c{
 	display: grid;
-	grid-template-columns: 270px 270px 270px;
+	grid-template-columns: 100%;
 	grid-row-gap: 30px;
 	padding: 20px;
 	background-color: inherit;
@@ -38,8 +43,8 @@ a:hover{
 }
 
 .i-t{
-	width: 250px;
-	height: 145px
+	max-width: 250px;
+	height: auto;
 }
 
 
@@ -48,3 +53,53 @@ a:hover{
 	display: inline-block;;
 }
 
+.menu {
+  display: none;
+}
+.main {
+  width: 100%;
+}
+
+.c-d-i2{
+	display: none;
+}
+
+@media only screen and (min-width: 992px) {
+	.menu1{
+		display: none;
+	}
+	.menu{
+		display: inline-block;
+		width: 25%;
+		float: left;
+	}
+	.main{
+		width: 75%;
+		float: left;
+	}	
+	.g-c{
+		grid-template-columns: 48% 48%;
+	}
+	.c-d-i1{
+		display: none;
+	}
+	.c-d-i2{
+		display: inline;
+	}	
+} 
+
+@media only screen and (min-width: 1200px) {
+	.menu{
+		display: inline-block;
+		width: 25%;
+	}
+	.main{
+		width: 75%
+	}
+	.menu1{
+		display: none;
+	}
+	.g-c{
+		grid-template-columns: 32% 32% 32%;
+	}
+}
